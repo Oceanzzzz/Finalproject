@@ -1,12 +1,17 @@
 package sample;
 
 import javafx.animation.TranslateTransition;
+import javafx.application.Application;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.*;
 import java.awt.*;
 import java.lang.Math;
 import java.util.Random;
 import javafx.scene.Scene;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
@@ -30,6 +35,7 @@ class   Creature extends Thread {
     public static boolean isreplay=false;
     public static boolean isbattling=false;
     public static int round=0;
+    public static Label label;
     public static int [][]direction=new int [][] {{1,0},{0,1},{-1,0},{0,-1}};
     //public static int vx;
     //public static int vy;
@@ -54,7 +60,7 @@ class   Creature extends Thread {
 
         int x=px,y=py;
 
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(50),imageView);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(200),imageView);
         Battleground.ground[tx][ty]=Battleground.ground[px][py];
         Battleground.ground[px][py]=null;
         //System.out.println(rytovy());
@@ -176,6 +182,17 @@ class   Creature extends Thread {
             isend=true;
             isbattling=false;
             round++;
+           /* if(count==0)
+                label=new Label("CalabashBrothers Win!!");
+            if(count1==0)
+                label=new Label("CalabashBrothers Win!!");
+            label.setLayoutX(650);
+            label.setLayoutY(300);
+            label.setScaleX(3);
+            label.setScaleY(3);
+            label.setBackground(new Background(new BackgroundFill(new Color(0.5,0.5,0.5,0.5),null,null)));
+            Main.root.getChildren().add(label);
+            */
         }
     }
     public void pk(int dx,int dy)
@@ -383,7 +400,7 @@ class   Creature extends Thread {
 
 
                 try {
-                    sleep(50);
+                    sleep(200);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

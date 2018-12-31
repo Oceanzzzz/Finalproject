@@ -5,11 +5,15 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.image.*;
@@ -52,7 +56,13 @@ public class Main extends Application {
         imageView.setFitHeight(900);
         imageView.setFitWidth(1500);
         root.getChildren().add(imageView);
-
+        Label label=new Label("按1-5选择阵型，TAB切换阵营，space开始战斗");
+        label.setLayoutX(650);
+        label.setLayoutY(50);
+        label.setScaleX(3);
+        label.setScaleY(3);
+        label.setBackground(new Background(new BackgroundFill(new Color(0.5,0.5,0.5,0.5),null,null)));
+        root.getChildren().add(label);
         /*for(int i=0;i <Battleground.Maxcalabashbrothers+Formation.numbers+3;i++)
             root.getChildren().add(Formation.beengs[i].imageView);
             */

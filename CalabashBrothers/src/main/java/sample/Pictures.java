@@ -21,6 +21,6 @@ public class Pictures {
             pic_creaturs.add(new Image("images/"+x+".png"));
             pic_creaturs_death.add(new Image("images/"+x+"death.png"));
         }
-
+        //System.out.println(Pictures.pic_creaturs.size());
     }
 }

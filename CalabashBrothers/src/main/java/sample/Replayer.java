@@ -48,7 +48,7 @@ public class Replayer extends Thread{
               Formation.beengs[Creature.replay[i][0]].pk(Creature.replay[i][2], Creature.replay[i][3]);
           }
           try {
-              sleep(50);
+              sleep(200);
           }
           catch (InterruptedException e)
           {
