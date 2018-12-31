@@ -63,6 +63,27 @@ public class Main extends Application {
         label.setScaleY(3);
         label.setBackground(new Background(new BackgroundFill(new Color(0.5,0.5,0.5,0.5),null,null)));
         root.getChildren().add(label);
+        Label label1=new Label("按L回放战斗过程");
+        label1.setLayoutX(60);
+        label1.setLayoutY(200);
+        label1.setScaleX(1.8);
+        label1.setScaleY(1.8);
+        label1.setBackground(new Background(new BackgroundFill(new Color(0.5,0.5,0.5,0.5),null,null)));
+        root.getChildren().add(label1);
+        Label label2=new Label("按S保存战斗过程");
+        label2.setLayoutX(60);
+        label2.setLayoutY(300);
+        label2.setScaleX(1.8);
+        label2.setScaleY(1.8);
+        label2.setBackground(new Background(new BackgroundFill(new Color(0.5,0.5,0.5,0.5),null,null)));
+        root.getChildren().add(label2);
+        Label label3=new Label("按Enter清理战场");
+        label3.setLayoutX(60);
+        label3.setLayoutY(400);
+        label3.setScaleX(1.8);
+        label3.setScaleY(1.8);
+        label3.setBackground(new Background(new BackgroundFill(new Color(0.5,0.5,0.5,0.5),null,null)));
+        root.getChildren().add(label3);
         /*for(int i=0;i <Battleground.Maxcalabashbrothers+Formation.numbers+3;i++)
             root.getChildren().add(Formation.beengs[i].imageView);
             */
